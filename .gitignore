@@ -1,0 +1,11 @@
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Local-only: incoming PDFs (the dashboard data is the source of truth)
+# Comment this out if you want to version-control the raw PDFs too.
+inbox/*.pdf
