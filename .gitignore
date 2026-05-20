@@ -10,3 +10,7 @@ Thumbs.db
 # Keep PDFs local only (large binary files; not needed for the public dashboard).
 T20 strategy/
 inbox/
+
+# Local automation — machine-specific paths, not useful in the repo
+run-t20.ps1
+t20-auto.log
