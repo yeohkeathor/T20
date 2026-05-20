@@ -1,1 +1,82 @@
-[]
+[
+  {
+    "date": "2026-04-09",
+    "dow": "Thursday",
+    "sw": "OFF",
+    "t20": "2026-05-08",
+    "strategy": "D02_NewMomentumBeta",
+    "top7": [
+      {"code":"5210","stock":"ARMADA","liq":"13.927m","close":"0.375","sector":"Energy","mc":"2.223b"},
+      {"code":"0245","stock":"MNHLDG","liq":"9.040m","close":"1.87","sector":"Construction","mc":"1.234b"},
+      {"code":"1961","stock":"IOICORP","liq":"52.761m","close":"4.25","sector":"Plantation","mc":"26.700b"},
+      {"code":"0325","stock":"NE","liq":"2.391m","close":"0.785","sector":"Industrial Products & Services","mc":"580.900m"},
+      {"code":"9407","stock":"PARAGON","liq":"6.381m","close":"4.5","sector":"Consumer Products & Services","mc":"455.000m"},
+      {"code":"5323","stock":"JPG","liq":"13.763m","close":"1.87","sector":"Plantation","mc":"4.675b"},
+      {"code":"7277","stock":"DIALOG","liq":"70.050m","close":"2.24","sector":"Energy","mc":"12.600b"}
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "dow": "Friday",
+    "sw": "OFF",
+    "t20": "2026-05-11",
+    "strategy": "D02_NewMomentumBeta",
+    "top7": [
+      {"code":"0245","stock":"MNHLDG","liq":"10.147m","close":"1.92","sector":"Construction","mc":"1.268b"},
+      {"code":"5210","stock":"ARMADA","liq":"13.232m","close":"0.38","sector":"Energy","mc":"2.253b"},
+      {"code":"9407","stock":"PARAGON","liq":"6.624m","close":"4.51","sector":"Consumer Products & Services","mc":"456.000m"},
+      {"code":"1961","stock":"IOICORP","liq":"51.735m","close":"4.25","sector":"Plantation","mc":"26.700b"},
+      {"code":"5292","stock":"UWC","liq":"9.877m","close":"4.38","sector":"Technology","mc":"4.832b"},
+      {"code":"5168","stock":"HARTA","liq":"19.668m","close":"1.25","sector":"Health Care","mc":"4.285b"},
+      {"code":"1619","stock":"DRBHCOM","liq":"2.512m","close":"1.18","sector":"Consumer Products & Services","mc":"2.281b"}
+    ]
+  },
+  {
+    "date": "2026-04-13",
+    "dow": "Monday",
+    "sw": "OFF",
+    "t20": "2026-05-12",
+    "strategy": "D02_NewMomentumBeta",
+    "top7": [
+      {"code":"5210","stock":"ARMADA","liq":"15.677m","close":"0.4","sector":"Energy","mc":"2.371b"},
+      {"code":"0245","stock":"MNHLDG","liq":"10.791m","close":"1.9","sector":"Construction","mc":"1.255b"},
+      {"code":"0215","stock":"SLVEST","liq":"17.306m","close":"2.77","sector":"Energy","mc":"2.650b"},
+      {"code":"1961","stock":"IOICORP","liq":"47.701m","close":"4.27","sector":"Plantation","mc":"26.800b"},
+      {"code":"9407","stock":"PARAGON","liq":"6.409m","close":"4.5","sector":"Consumer Products & Services","mc":"455.000m"},
+      {"code":"1619","stock":"DRBHCOM","liq":"3.068m","close":"1.2","sector":"Consumer Products & Services","mc":"2.320b"},
+      {"code":"7277","stock":"DIALOG","liq":"46.008m","close":"2.28","sector":"Energy","mc":"12.900b"}
+    ]
+  },
+  {
+    "date": "2026-04-14",
+    "dow": "Tuesday",
+    "sw": "OFF",
+    "t20": "2026-05-13",
+    "strategy": "D02_NewMomentumBeta",
+    "top7": [
+      {"code":"9407","stock":"PARAGON","liq":"6.815m","close":"4.58","sector":"Consumer Products & Services","mc":"463.100m"},
+      {"code":"1961","stock":"IOICORP","liq":"41.738m","close":"4.32","sector":"Plantation","mc":"27.200b"},
+      {"code":"0245","stock":"MNHLDG","liq":"18.543m","close":"1.99","sector":"Construction","mc":"1.314b"},
+      {"code":"5272","stock":"RANHILL","liq":"3.276m","close":"1.85","sector":"Utilities","mc":"2.399b"},
+      {"code":"5210","stock":"ARMADA","liq":"16.473m","close":"0.395","sector":"Energy","mc":"2.342b"},
+      {"code":"0233","stock":"PEKAT","liq":"3.944m","close":"1.55","sector":"Energy","mc":"1.096b"},
+      {"code":"0339","stock":"CBHB","liq":"6.653m","close":"0.585","sector":"Industrial Products & Services","mc":"1.100b"}
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "dow": "Wednesday",
+    "sw": "OFF",
+    "t20": "2026-05-14",
+    "strategy": "D02_NewMomentumBeta",
+    "top7": [
+      {"code":"9407","stock":"PARAGON","liq":"7.176m","close":"4.65","sector":"Consumer Products & Services","mc":"470.200m"},
+      {"code":"0233","stock":"PEKAT","liq":"3.726m","close":"1.62","sector":"Energy","mc":"1.145b"},
+      {"code":"0097","stock":"VITROX","liq":"6.938m","close":"4.8","sector":"Technology","mc":"9.088b"},
+      {"code":"5292","stock":"UWC","liq":"12.591m","close":"4.5","sector":"Technology","mc":"4.964b"},
+      {"code":"0245","stock":"MNHLDG","liq":"17.596m","close":"1.99","sector":"Construction","mc":"1.314b"},
+      {"code":"0215","stock":"SLVEST","liq":"14.540m","close":"2.8","sector":"Energy","mc":"2.679b"},
+      {"code":"5309","stock":"ITMAX","liq":"7.294m","close":"4.94","sector":"Technology","mc":"5.117b"}
+    ]
+  }
+]
