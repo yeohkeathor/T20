@@ -81,6 +81,7 @@ Starting from the report date, count forward one calendar day at a time. A day c
 | 2026-05-01 (Fri) | Workers' Day |
 | 2026-05-27 (Wed) | Hari Raya Haji |
 | 2026-06-01 (Mon) | Yang Dipertuan Agong's Birthday / Wesak (observed) |
+| 2026-06-02 (Tue) | Wesak Day (replacement) |
 | 2026-06-17 (Wed) | Awal Muharram |
 | 2026-08-25 (Tue) | Birthday of Prophet Muhammad |
 | 2026-08-31 (Mon) | National Day (Merdeka) |
@@ -156,4 +157,4 @@ End with a concise summary, e.g.:
 - **Deduplication on content date**, not filename, means the user can drop the same file twice without corrupting data.json.
 - **Insertion in chronological order** preserves the streak computation logic — the dashboard relies on array order, not on stored streak values.
 - **PDFs git-ignored** means the GitHub repo stays small and only contains shareable text artifacts (HTML and JSON).
-- **`index.html` (not `T20_Strategy_Dashboard.html`)** so GitHub Pages serves it at the repo root URL — friends visit `https://<user>.github.io/<repo>/` directly.
+- **`index.html` (not `T20_Strategy_Dashboard.html`)** so GitHub Pages serves it at the repo root URL — friends visi
