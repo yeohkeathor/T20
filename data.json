@@ -446,5 +446,21 @@
       {"code":"5330","stock":"TMK","liq":"3.802m","close":"1.85","sector":"Industrial Products & Services","mc":"1.850b"},
       {"code":"0128","stock":"FRONTKN","liq":"48.429m","close":"4.71","sector":"Technology","mc":"8.582b"}
     ]
+  },
+  {
+    "date": "2026-05-20",
+    "dow": "Wednesday",
+    "sw": "ON",
+    "t20": "2026-06-23",
+    "strategy": "D02_NewMomentumBeta",
+    "top7": [
+      {"code":"5246","stock":"WPRTS","liq":"45.758m","close":"6.15","sector":"Transportation & Logistics","mc":"21.100b"},
+      {"code":"5005","stock":"UNISEM","liq":"25.099m","close":"4","sector":"Technology","mc":"6.452b"},
+      {"code":"8869","stock":"PMETAL","liq":"76.693m","close":"8.95","sector":"Industrial Products & Services","mc":"73.700b"},
+      {"code":"8907","stock":"EG","liq":"63.556m","close":"1.55","sector":"Industrial Products & Services","mc":"1.450b"},
+      {"code":"5330","stock":"TMK","liq":"4.556m","close":"1.9","sector":"Industrial Products & Services","mc":"1.900b"},
+      {"code":"5272","stock":"RANHILL","liq":"9.648m","close":"2.06","sector":"Utilities","mc":"2.671b"},
+      {"code":"0151","stock":"KGB","liq":"45.808m","close":"7.14","sector":"Industrial Products & Services","mc":"6.155b"}
+    ]
   }
 ]

@@ -126,7 +126,17 @@ The session-specific mount path is shown in the system prompt's "Shell access" s
 
 If bash is unavailable, tell the user: "Bash is offline in this session — please move `<file>.pdf` from `inbox\` into `T20 strategy\` manually."
 
-### 8. Report
+### 8. Commit and push
+
+After updating data.json, use the Bash tool to run these commands — do NOT print them as a reminder, actually execute them:
+
+1. `git add data.json`
+2. `git commit -m "Add T20 <date(s)>"` — list all processed dates in the message
+3. `& "C:\Program Files\Git\bin\bash.exe" -c "cd '/d/08 project/Stock Insight - T20' && git push"`
+
+If any command fails, log the error output but continue to step 9.
+
+### 9. Report
 
 End with a concise summary, e.g.:
 > Processed 2 new T20 reports:
@@ -135,9 +145,7 @@ End with a concise summary, e.g.:
 >
 > Skipped 1 duplicate (2026-05-18). Rejected 0 invalid files.
 >
-> [Open dashboard](computer://D:\08 project\Stock Insight - T20\index.html)
->
-> Don't forget to commit + push: `git add data.json && git commit -m "Add 2026-05-19 + 2026-05-20" && git push`
+> Push: succeeded / failed (include actual error if failed)
 
 ## Edge cases
 
