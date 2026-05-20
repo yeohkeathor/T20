@@ -1,6 +1,6 @@
 ---
 name: t20-extractor
-description: Extract data from daily T20 strategy PDF reports (Stock Insight Malaysia / Bursa Malaysia momentum-beta style reports) and update the Stock Insight T20 dashboard. Use this skill whenever the user says "process t20", "update t20", "extract t20", "new t20 pdf", "update the dashboard", drops PDFs in the T20 inbox folder, or attaches a PDF that contains the ranked table header "Code Stock Liquidity Close Sector MarketCap" and a "Strategy Switch:" line — even if they don't explicitly name the skill. Use this skill for the full pipeline: format validation, deduplication against data.json, extracting the top-7 ranked stocks with full row data (code, stock, liquidity, close, sector, market cap), computing the 20th Bursa Malaysia trading day using the gazetted 2026 holiday calendar, appending to data.json and the CSV in chronological order, and archiving the source PDF.
+description: Extract data from daily T20 strategy PDF reports (Stock Insight Malaysia / Bursa Malaysia momentum-beta style reports) and update the Stock Insight T20 dashboard. Use this skill whenever the user says "process t20", "update t20", "extract t20", "new t20 pdf", "update the dashboard", drops PDFs in the T20 inbox folder, or attaches a PDF that contains the ranked table header "Code Stock Liquidity Close Sector MarketCap" and a "Strategy Switch:" line — even if they don't explicitly name the skill. Use this skill for the full pipeline: format validation, deduplication against data.json, extracting the top-7 ranked stocks with full row data (code, stock, liquidity, close, sector, market cap), computing the 20th Bursa Malaysia trading day using the gazetted 2026 holiday calendar, appending to data.json in chronological order, and archiving the source PDF.
 ---
 
 # T20 Strategy Extractor
@@ -12,18 +12,17 @@ The PDFs come from a third-party service. The strategy name printed in the repor
 ## Architecture
 
 The dashboard is split into two files:
-- `T20_Strategy_Dashboard.html` — UI/rendering code only, rarely changes
+- `index.html` — UI/rendering code only, rarely changes
 - `data.json` — single source of truth, an array of report objects, updated daily by this skill
 
-The HTML loads the JSON via `fetch("./data.json")` at page load. **This skill should only edit `data.json` and the CSV** — never the HTML — unless the user explicitly asks for a UI change.
+The HTML loads the JSON via `fetch("./data.json")` at page load. **This skill should only edit `data.json`** — never the HTML — unless the user explicitly asks for a UI change.
 
 ## Fixed paths
 
 - **Inbox** (new PDFs land here): `D:\08 project\Stock Insight - T20\inbox\`
 - **Archive** (where processed PDFs are moved to): `D:\08 project\Stock Insight - T20\T20 strategy\`
-- **Data file (PRIMARY)**: `D:\08 project\Stock Insight - T20\data.json`
-- **CSV (mirror of data.json, flat)**: `D:\08 project\Stock Insight - T20\T20_Strategy_Data.csv`
-- **Dashboard UI**: `D:\08 project\Stock Insight - T20\T20_Strategy_Dashboard.html` (do not touch)
+- **Data file (the only file the skill edits)**: `D:\08 project\Stock Insight - T20\data.json`
+- **Dashboard UI**: `D:\08 project\Stock Insight - T20\index.html` (do not touch)
 
 ## Step-by-step
 
@@ -46,7 +45,7 @@ If any check fails, record the filename + the failed check and skip that file. D
 
 ### 3. Deduplicate against data.json
 
-`Read` `D:\08 project\Stock Insight - T20\data.json`. Search for `"date":"<the new date>"`. If present, mark as duplicate and skip extraction for that file — but still archive it in step 8 (since it's a known good file).
+`Read` `D:\08 project\Stock Insight - T20\data.json`. Search for `"date":"<the new date>"`. If present, mark as duplicate and skip extraction for that file — but still archive it in step 7 (since it's a known good file).
 
 ### 4. Extract the data
 
@@ -115,15 +114,7 @@ Optionally include `"strategy":"<name>"` if extracted, though it's not required 
 
 The `streak` field is computed by the dashboard at runtime from the array order — do not include it.
 
-### 7. Update T20_Strategy_Data.csv
-
-`Edit` `T20_Strategy_Data.csv`. Insert in chronological order:
-```
-YYYY-MM-DD,DayOfWeek,SwitchLabel,20th-Trading-Day,Top1,Top2,Top3,Top4,Top5,Top6,Top7
-```
-Where `SwitchLabel` is exactly `ON (Bullish)` or `OFF (Bearish)`. The top stocks are just the stock names.
-
-### 8. Archive the PDF
+### 7. Archive the PDF
 
 Move the file from inbox to the archive. If `mcp__workspace__bash` is available:
 ```bash
@@ -134,7 +125,7 @@ The session-specific mount path is shown in the system prompt's "Shell access" s
 
 If bash is unavailable, tell the user: "Bash is offline in this session — please move `<file>.pdf` from `inbox\` into `T20 strategy\` manually."
 
-### 9. Report
+### 8. Report
 
 End with a concise summary, e.g.:
 > Processed 2 new T20 reports:
@@ -143,9 +134,9 @@ End with a concise summary, e.g.:
 >
 > Skipped 1 duplicate (2026-05-18). Rejected 0 invalid files.
 >
-> [Open dashboard](computer://D:\08 project\Stock Insight - T20\T20_Strategy_Dashboard.html)
+> [Open dashboard](computer://D:\08 project\Stock Insight - T20\index.html)
 >
-> Don't forget to commit + push: `git add data.json T20_Strategy_Data.csv && git commit -m "Add 2026-05-19 + 2026-05-20" && git push`
+> Don't forget to commit + push: `git add data.json && git commit -m "Add 2026-05-19 + 2026-05-20" && git push`
 
 ## Edge cases
 
@@ -164,4 +155,5 @@ End with a concise summary, e.g.:
 - **Structural validation** (header row + Strategy Switch line + date) is stable across vendor changes to titling, branding, or strategy naming.
 - **Deduplication on content date**, not filename, means the user can drop the same file twice without corrupting data.json.
 - **Insertion in chronological order** preserves the streak computation logic — the dashboard relies on array order, not on stored streak values.
-- **PDFs git-ignored** means the GitHub repo stays small and only contains shareable text artifacts (HTML, JSON, CSV).
+- **PDFs git-ignored** means the GitHub repo stays small and only contains shareable text artifacts (HTML and JSON).
+- **`index.html` (not `T20_Strategy_Dashboard.html`)** so GitHub Pages serves it at the repo root URL — friends visit `https://<user>.github.io/<repo>/` directly.
