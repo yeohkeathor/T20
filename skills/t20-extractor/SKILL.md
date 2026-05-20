@@ -157,4 +157,4 @@ End with a concise summary, e.g.:
 - **Deduplication on content date**, not filename, means the user can drop the same file twice without corrupting data.json.
 - **Insertion in chronological order** preserves the streak computation logic — the dashboard relies on array order, not on stored streak values.
 - **PDFs git-ignored** means the GitHub repo stays small and only contains shareable text artifacts (HTML and JSON).
-- **`index.html` (not `T20_Strategy_Dashboard.html`)** so GitHub Pages serves it at the repo root URL — friends visi
+- **`index.html` (not `T20_Strategy_Dashboard.html`)** so GitHub Pages serves it at the repo root URL — friends visit `https://<user>.github.io/<repo>/` directly.
