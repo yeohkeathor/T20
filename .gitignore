@@ -6,6 +6,7 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Local-only: incoming PDFs (the dashboard data is the source of truth)
-# Comment this out if you want to version-control the raw PDFs too.
-inbox/*.pdf
+# PDF folders — the JSON data file is the source of truth on GitHub.
+# Keep PDFs local only (large binary files; not needed for the public dashboard).
+T20 strategy/
+inbox/
