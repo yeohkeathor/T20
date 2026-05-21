@@ -462,5 +462,21 @@
       {"code":"5272","stock":"RANHILL","liq":"9.648m","close":"2.06","sector":"Utilities","mc":"2.671b"},
       {"code":"0151","stock":"KGB","liq":"45.808m","close":"7.14","sector":"Industrial Products & Services","mc":"6.155b"}
     ]
+  },
+  {
+    "date": "2026-05-21",
+    "dow": "Thursday",
+    "sw": "ON",
+    "t20": "2026-06-24",
+    "strategy": "D02_NewMomentumBeta",
+    "top7": [
+      {"code":"5005","stock":"UNISEM","liq":"28.667m","close":"4.3","sector":"Technology","mc":"6.936b"},
+      {"code":"5272","stock":"RANHILL","liq":"10.233m","close":"2.18","sector":"Utilities","mc":"2.827b"},
+      {"code":"5246","stock":"WPRTS","liq":"46.933m","close":"6.08","sector":"Transportation & Logistics","mc":"20.900b"},
+      {"code":"8907","stock":"EG","liq":"37.972m","close":"1.57","sector":"Industrial Products & Services","mc":"1.469b"},
+      {"code":"0128","stock":"FRONTKN","liq":"39.990m","close":"4.77","sector":"Technology","mc":"8.692b"},
+      {"code":"5053","stock":"OSK","liq":"2.565m","close":"1.91","sector":"Property","mc":"6.003b"},
+      {"code":"0097","stock":"VITROX","liq":"30.933m","close":"6.48","sector":"Technology","mc":"12.300b"}
+    ]
   }
 ]
